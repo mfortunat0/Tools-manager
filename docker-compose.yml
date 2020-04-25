@@ -1,0 +1,21 @@
+version: "3"
+services:
+  api:
+    build: .
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/usr/api
+    networks:
+      - host
+    env_file: .env
+
+  database:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    networks:
+      - host
+networks:
+  host:
+    driver: bridge
