@@ -1,0 +1,14 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/node:latest
+        environment:
+          JWT_KEY: d41d8cd98f00b204e9800998ecf8427e
+          MONGO_URL: mongodb://database/tools
+      - image: circleci/mongo:latest
+        name: database
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm test
