@@ -3,7 +3,6 @@
 ## Links
 
 [Swagger](https://app.swaggerhub.com/apis/xmaz10/Rest-api/1.0.0)
-[Heroku](https://rest-api-tools.herokuapp.com/tools)
 
 ## Gettin started
 
